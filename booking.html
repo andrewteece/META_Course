@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>META Front-End-Developer Course</title>
+    <meta property="og:title" content="META Front-End Developer Course" />
+    <meta property="'og:type" content="website" />
+    <meta property="og:image" content="logo.png" />
+    <meta property="og:url" content="http://meta-fedc" />
+    <meta
+      property="og:description"
+      content="META course for Front End Developers"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="META Front-End Course" />
+  </head>
+  <body>
+    <form method="POST">
+      <fieldset id="size">
+        <legend>Choose Table Size</legend>
+        <label
+          ><input type="radio" value="2" name="size" /> 2-Person Table</label
+        >
+        <label
+          ><input type="radio" value="4" name="size" checked /> 4-Person
+          Table</label
+        >
+        <label
+          ><input type="radio" value="6" name="size" /> 6-Person Table</label
+        >
+      </fieldset>
+      <fieldset id="location">
+        <legend>Choose Table Location</legend>
+        <label
+          ><input type="radio" value="inside" name="location" checked />
+          Inside</label
+        >
+        <label
+          ><input type="radio" value="outside" name="location" /> Outside</label
+        >
+      </fieldset>
+      <button type="submit">Book Table</button>
+    </form>
+  </body>
+</html>
