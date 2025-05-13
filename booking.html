@@ -16,31 +16,35 @@
     <meta property="og:site_name" content="META Front-End Course" />
   </head>
   <body>
-    <form method="POST">
-      <fieldset id="size">
-        <legend>Choose Table Size</legend>
-        <label
-          ><input type="radio" value="2" name="size" /> 2-Person Table</label
-        >
-        <label
-          ><input type="radio" value="4" name="size" checked /> 4-Person
-          Table</label
-        >
-        <label
-          ><input type="radio" value="6" name="size" /> 6-Person Table</label
-        >
-      </fieldset>
-      <fieldset id="location">
-        <legend>Choose Table Location</legend>
-        <label
-          ><input type="radio" value="inside" name="location" checked />
-          Inside</label
-        >
-        <label
-          ><input type="radio" value="outside" name="location" /> Outside</label
-        >
-      </fieldset>
+    <div>
+      <label for="booking_date">Booking Date</label>
+      <input type="date" id="booking_date" name="booking_date" />
+    </div>
+    <div>
+      <label for="booking_people">Number of People</label>
+      <input
+        type="range"
+        id="booking_people"
+        name="booking_people"
+        min="1"
+        max="10"
+        value="4"
+        oninput="this.nextElementSibling.value = this.value"
+      />
+      <output>4</output>
+    </div>
+    <div>
+      <label for="booking_location">Location</label>
+      <input id="booking_location" name="booking_location" list="locations" />
+      <datalist id="locations">
+        <option value="Downtown"></option>
+        <option value="Uptown"></option>
+        <option value="East Side"></option>
+        <option value="West Side"></option>
+      </datalist>
+    </div>
+    <div>
       <button type="submit">Book Table</button>
-    </form>
+    </div>
   </body>
 </html>
